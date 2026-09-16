@@ -1,28 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 260" width="1200" height="260">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0b0a18"/>
-      <stop offset=".55" stop-color="#15113a"/>
-      <stop offset="1" stop-color="#0d1117"/>
+      <stop offset="0" stop-color="#090f19"/>
+      <stop offset=".55" stop-color="#1e3446"/>
+      <stop offset="1" stop-color="#111b27"/>
     </linearGradient>
     <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#ffffff"/>
-      <stop offset="1" stop-color="#a78bfa"/>
+      <stop offset="0" stop-color="#eef7f8"/>
+      <stop offset="1" stop-color="#9fc9dc"/>
     </linearGradient>
     <radialGradient id="glow">
-      <stop offset="0" stop-color="#7c3aed" stop-opacity=".45"/>
-      <stop offset="1" stop-color="#7c3aed" stop-opacity="0"/>
+      <stop offset="0" stop-color="#6d9eb4" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#6d9eb4" stop-opacity="0"/>
     </radialGradient>
     <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
-      <path d="M32 0H0V32" fill="none" stroke="#ffffff" stroke-opacity=".05"/>
+      <circle cx="6" cy="8" r=".85" fill="#eef7f8" opacity=".22"/><circle cx="24" cy="22" r=".6" fill="#9fc9dc" opacity=".24"/><circle cx="30" cy="4" r=".4" fill="#eef7f8" opacity=".18"/>
     </pattern>
     <clipPath id="card"><rect width="378" height="258" rx="16"/></clipPath>
   </defs>
   <style>
     text { font-family: 'JetBrains Mono', 'Fira Code', Consolas, 'Courier New', monospace; }
     .title { font-size: 30px; font-weight: 700; fill: url(#title); }
-    .desc  { font-size: 19px; fill: #c4b5fd; }
-    .lang  { font-size: 17px; fill: #8b80c9; }
+    .desc  { font-size: 19px; fill: #d4e5eb; }
+    .lang  { font-size: 17px; fill: #8cabb9; }
     .glow { animation: drift 9s ease-in-out infinite alternate both; }
     .d2 { animation-delay: -3s; }
     .d3 { animation-delay: -6s; }
@@ -41,7 +41,7 @@
     <rect width="378" height="258" fill="url(#bg)"/>
     <rect width="378" height="258" fill="url(#grid)"/>
     <ellipse class="glow d1" cx="80" cy="50" rx="200" ry="130" fill="url(#glow)"/>
-    <rect y="255" width="378" height="3" fill="#7c3aed" opacity=".6"/>
+    <rect y="255" width="378" height="3" fill="#6d9eb4" opacity=".6"/>
     <text class="title" x="28" y="62">VEYLO</text>
     <text class="desc" x="28" y="108">Own VPN service:</text>
     <text class="desc" x="28" y="138">subscription facade,</text>
@@ -54,7 +54,7 @@
     <rect width="378" height="258" fill="url(#bg)"/>
     <rect width="378" height="258" fill="url(#grid)"/>
     <ellipse class="glow d2" cx="80" cy="50" rx="200" ry="130" fill="url(#glow)"/>
-    <rect y="255" width="378" height="3" fill="#7c3aed" opacity=".6"/>
+    <rect y="255" width="378" height="3" fill="#6d9eb4" opacity=".6"/>
     <text class="title" x="28" y="62">Lumberjack Clicker</text>
     <text class="desc" x="28" y="108">Clicker game for</text>
     <text class="desc" x="28" y="138">Yandex Games in plain</text>
@@ -67,7 +67,7 @@
     <rect width="378" height="258" fill="url(#bg)"/>
     <rect width="378" height="258" fill="url(#grid)"/>
     <ellipse class="glow d3" cx="80" cy="50" rx="200" ry="130" fill="url(#glow)"/>
-    <rect y="255" width="378" height="3" fill="#7c3aed" opacity=".6"/>
+    <rect y="255" width="378" height="3" fill="#6d9eb4" opacity=".6"/>
     <text class="title" x="28" y="62">VEYLO Bot</text>
     <text class="desc" x="28" y="108">User dashboard, QR subs,</text>
     <text class="desc" x="28" y="138">free trial, referrals,</text>

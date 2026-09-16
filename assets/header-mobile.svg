@@ -1,20 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 220" width="600" height="220">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0b0a18"/>
-      <stop offset=".55" stop-color="#15113a"/>
-      <stop offset="1" stop-color="#0d1117"/>
+      <stop offset="0" stop-color="#090f19"/>
+      <stop offset=".55" stop-color="#1e3446"/>
+      <stop offset="1" stop-color="#111b27"/>
     </linearGradient>
     <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#ffffff"/>
-      <stop offset="1" stop-color="#a78bfa"/>
+      <stop offset="0" stop-color="#eef7f8"/>
+      <stop offset="1" stop-color="#9fc9dc"/>
     </linearGradient>
     <radialGradient id="glow">
-      <stop offset="0" stop-color="#7c3aed" stop-opacity=".55"/>
-      <stop offset="1" stop-color="#7c3aed" stop-opacity="0"/>
+      <stop offset="0" stop-color="#6d9eb4" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#6d9eb4" stop-opacity="0"/>
     </radialGradient>
     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity=".05"/>
+      <circle cx="7" cy="9" r="1" fill="#eef7f8" opacity=".22"/><circle cx="29" cy="25" r=".7" fill="#9fc9dc" opacity=".24"/><circle cx="37" cy="5" r=".45" fill="#eef7f8" opacity=".18"/>
     </pattern>
     <clipPath id="frame"><rect width="600" height="220" rx="18"/></clipPath>
   </defs>
@@ -41,13 +41,13 @@
     <rect width="600" height="220" fill="url(#bg)"/>
     <rect width="600" height="220" fill="url(#grid)"/>
     <ellipse class="glow" cx="300" cy="100" rx="260" ry="130" fill="url(#glow)"/>
-    <text class="mono" x="300" y="110" text-anchor="middle" font-size="62" font-weight="700" fill="url(#title)" letter-spacing="4">miquella</text>
-    <g class="mono" font-size="22" fill="#c4b5fd" text-anchor="middle">
-      <text class="line l1" x="300" y="168">Python · JavaScript · Go<tspan class="caret" fill="#6d5bd0">_</tspan></text>
-      <text class="line l2" x="300" y="168">VPN infrastructure &amp; network transports<tspan class="caret" fill="#6d5bd0">_</tspan></text>
-      <text class="line l3" x="300" y="168">Telegram bots &amp; Yandex Games titles<tspan class="caret" fill="#6d5bd0">_</tspan></text>
-      <text class="line l4" x="300" y="168">now: building VEYLO<tspan class="caret" fill="#6d5bd0">_</tspan></text>
+    <text class="mono" x="300" y="110" text-anchor="middle" font-size="54" font-weight="700" fill="url(#title)" letter-spacing="2">MostViable</text>
+    <g class="mono" font-size="22" fill="#d4e5eb" text-anchor="middle">
+      <text class="line l1" x="300" y="168">Python · JavaScript · Go<tspan class="caret" fill="#83c5d4">_</tspan></text>
+      <text class="line l2" x="300" y="168">VPN infrastructure &amp; network transports<tspan class="caret" fill="#83c5d4">_</tspan></text>
+      <text class="line l3" x="300" y="168">Telegram bots &amp; Yandex Games titles<tspan class="caret" fill="#83c5d4">_</tspan></text>
+      <text class="line l4" x="300" y="168">now: building VEYLO<tspan class="caret" fill="#83c5d4">_</tspan></text>
     </g>
-    <rect x="0" y="216" width="600" height="4" fill="#7c3aed" opacity=".6"/>
+    <rect x="0" y="216" width="600" height="4" fill="#6d9eb4" opacity=".6"/>
   </g>
 </svg>

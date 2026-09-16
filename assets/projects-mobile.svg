@@ -1,20 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 738" width="600" height="738">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0b0a18"/><stop offset=".55" stop-color="#15113a"/><stop offset="1" stop-color="#0d1117"/>
+      <stop offset="0" stop-color="#090f19"/><stop offset=".55" stop-color="#1e3446"/><stop offset="1" stop-color="#111b27"/>
     </linearGradient>
     <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#a78bfa"/>
+      <stop offset="0" stop-color="#eef7f8"/><stop offset="1" stop-color="#9fc9dc"/>
     </linearGradient>
-    <radialGradient id="glow"><stop offset="0" stop-color="#7c3aed" stop-opacity=".45"/><stop offset="1" stop-color="#7c3aed" stop-opacity="0"/></radialGradient>
-    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#ffffff" stroke-opacity=".05"/></pattern>
+    <radialGradient id="glow"><stop offset="0" stop-color="#6d9eb4" stop-opacity=".45"/><stop offset="1" stop-color="#6d9eb4" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><circle cx="6" cy="8" r=".85" fill="#eef7f8" opacity=".22"/><circle cx="24" cy="22" r=".6" fill="#9fc9dc" opacity=".24"/><circle cx="30" cy="4" r=".4" fill="#eef7f8" opacity=".18"/></pattern>
     <clipPath id="card"><rect width="600" height="230" rx="16"/></clipPath>
   </defs>
   <style>
     text { font-family: 'JetBrains Mono', 'Fira Code', Consolas, 'Courier New', monospace; }
     .title { font-size: 34px; font-weight: 700; fill: url(#title); }
-    .desc { font-size: 22px; fill: #c4b5fd; }
-    .lang { font-size: 19px; fill: #8b80c9; }
+    .desc { font-size: 22px; fill: #d4e5eb; }
+    .lang { font-size: 19px; fill: #8cabb9; }
     .glow { animation: drift 9s ease-in-out infinite alternate both; }
     @keyframes drift { 0% { transform: translate(0, 0); } 50% { transform: translate(300px, 60px); } 100% { transform: translate(120px, 120px); } }
     .c { animation: in .8s ease-out both; }
@@ -24,7 +24,7 @@
     <rect width="600" height="230" fill="url(#bg)"/>
     <rect width="600" height="230" fill="url(#grid)"/>
     <ellipse class="glow" style="animation-delay:-0s" cx="120" cy="60" rx="260" ry="150" fill="url(#glow)"/>
-    <rect y="227" width="600" height="3" fill="#7c3aed" opacity=".6"/>
+    <rect y="227" width="600" height="3" fill="#6d9eb4" opacity=".6"/>
     <text class="title" x="32" y="64">VEYLO</text>
     <text class="desc" x="32" y="110">Own VPN service:</text><text class="desc" x="32" y="144">subscription facade,</text><text class="desc" x="32" y="178">routing, node configs.</text>
     <circle cx="40" cy="196" r="8" fill="#3776AB"/>
@@ -34,7 +34,7 @@
     <rect width="600" height="230" fill="url(#bg)"/>
     <rect width="600" height="230" fill="url(#grid)"/>
     <ellipse class="glow" style="animation-delay:-3s" cx="120" cy="60" rx="260" ry="150" fill="url(#glow)"/>
-    <rect y="227" width="600" height="3" fill="#7c3aed" opacity=".6"/>
+    <rect y="227" width="600" height="3" fill="#6d9eb4" opacity=".6"/>
     <text class="title" x="32" y="64">Lumberjack Clicker</text>
     <text class="desc" x="32" y="110">Clicker game for</text><text class="desc" x="32" y="144">Yandex Games in plain</text><text class="desc" x="32" y="178">JavaScript, no frameworks.</text>
     <circle cx="40" cy="196" r="8" fill="#F7DF1E"/>
@@ -44,7 +44,7 @@
     <rect width="600" height="230" fill="url(#bg)"/>
     <rect width="600" height="230" fill="url(#grid)"/>
     <ellipse class="glow" style="animation-delay:-6s" cx="120" cy="60" rx="260" ry="150" fill="url(#glow)"/>
-    <rect y="227" width="600" height="3" fill="#7c3aed" opacity=".6"/>
+    <rect y="227" width="600" height="3" fill="#6d9eb4" opacity=".6"/>
     <text class="title" x="32" y="64">VEYLO Bot</text>
     <text class="desc" x="32" y="110">User dashboard, QR subs,</text><text class="desc" x="32" y="144">free trial, referrals,</text><text class="desc" x="32" y="178">device limits, admin panel.</text>
     <circle cx="40" cy="196" r="8" fill="#3776AB"/>

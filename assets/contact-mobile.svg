@@ -1,32 +1,32 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 250" width="600" height="250">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0b0a18"/>
-      <stop offset=".55" stop-color="#15113a"/>
-      <stop offset="1" stop-color="#0d1117"/>
+      <stop offset="0" stop-color="#090f19"/>
+      <stop offset=".55" stop-color="#1e3446"/>
+      <stop offset="1" stop-color="#111b27"/>
     </linearGradient>
     <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#ffffff"/>
-      <stop offset="1" stop-color="#a78bfa"/>
+      <stop offset="0" stop-color="#eef7f8"/>
+      <stop offset="1" stop-color="#9fc9dc"/>
     </linearGradient>
     <linearGradient id="badge" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#a78bfa"/>
+      <stop offset="0" stop-color="#9fc9dc"/>
       <stop offset="1" stop-color="#5b3fc4"/>
     </linearGradient>
     <radialGradient id="glow">
-      <stop offset="0" stop-color="#7c3aed" stop-opacity=".45"/>
-      <stop offset="1" stop-color="#7c3aed" stop-opacity="0"/>
+      <stop offset="0" stop-color="#6d9eb4" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#6d9eb4" stop-opacity="0"/>
     </radialGradient>
     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity=".05"/>
+      <circle cx="7" cy="9" r="1" fill="#eef7f8" opacity=".22"/><circle cx="29" cy="25" r=".7" fill="#9fc9dc" opacity=".24"/><circle cx="37" cy="5" r=".45" fill="#eef7f8" opacity=".18"/>
     </pattern>
     <clipPath id="frame"><rect width="600" height="250" rx="18"/></clipPath>
   </defs>
   <style>
     text { font-family: 'JetBrains Mono', 'Fira Code', Consolas, 'Courier New', monospace; }
     .title { font-size: 36px; font-weight: 700; fill: url(#title); }
-    .sub { font-size: 22px; fill: #8b80c9; }
-    .desc { font-size: 22px; fill: #c4b5fd; }
+    .sub { font-size: 22px; fill: #8cabb9; }
+    .desc { font-size: 22px; fill: #d4e5eb; }
     .glow { animation: drift 10s ease-in-out infinite alternate both; }
     @keyframes drift { from { transform: translate(0, 0); } to { transform: translate(340px, 0); } }
   </style>
@@ -34,9 +34,9 @@
     <rect width="600" height="250" fill="url(#bg)"/>
     <rect width="600" height="250" fill="url(#grid)"/>
     <ellipse class="glow" cx="120" cy="125" rx="260" ry="180" fill="url(#glow)"/>
-    <rect y="246" width="600" height="4" fill="#7c3aed" opacity=".6"/>
+    <rect y="246" width="600" height="4" fill="#6d9eb4" opacity=".6"/>
     <circle cx="80" cy="76" r="44" fill="url(#badge)"/>
-    <path transform="translate(51 47) scale(2.4)" fill="#ffffff" d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/>
+    <path transform="translate(51 47) scale(2.4)" fill="#eef7f8" d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/>
     <text class="title" x="148" y="70">@MostViable</text>
     <text class="sub" x="148" y="104">t.me/MostViable</text>
     <text class="desc" x="32" y="176">Open to talk VPN,</text>
