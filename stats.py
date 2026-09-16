@@ -10,7 +10,7 @@ QUERY = """{ viewer {
     nodes { languages(first: 10) { edges { size node { name color } } } } } } }"""
 
 MONTHS = "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split()
-SHADES = ["#1b1733", "#3b2a7a", "#5b3fc4", "#8b5cf6", "#c4b5fd"]
+SHADES = ["#111c29", "#254251", "#3f6d7d", "#6d9eb4", "#d2edf1"]
 
 
 def fetch(token):
@@ -51,13 +51,13 @@ def frame(h, body, style, width=1200, glow_cx=300):
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="{w}" height="{h}">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0b0a18"/><stop offset=".55" stop-color="#15113a"/><stop offset="1" stop-color="#0d1117"/>
+      <stop offset="0" stop-color="#090f19"/><stop offset=".55" stop-color="#1e3446"/><stop offset="1" stop-color="#111b27"/>
     </linearGradient>
     <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#a78bfa"/>
+      <stop offset="0" stop-color="#eef7f8"/><stop offset="1" stop-color="#9fc9dc"/>
     </linearGradient>
-    <radialGradient id="glow"><stop offset="0" stop-color="#7c3aed" stop-opacity=".45"/><stop offset="1" stop-color="#7c3aed" stop-opacity="0"/></radialGradient>
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity=".05"/></pattern>
+    <radialGradient id="glow"><stop offset="0" stop-color="#6d9eb4" stop-opacity=".45"/><stop offset="1" stop-color="#6d9eb4" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="7" cy="9" r="1" fill="#eef7f8" opacity=".22"/><circle cx="29" cy="25" r=".7" fill="#9fc9dc" opacity=".24"/><circle cx="37" cy="5" r=".45" fill="#eef7f8" opacity=".18"/></pattern>
     <clipPath id="frame"><rect width="{w}" height="{h}" rx="18"/></clipPath>
   </defs>
   <style>
@@ -71,7 +71,7 @@ def frame(h, body, style, width=1200, glow_cx=300):
     <rect width="{w}" height="{h}" fill="url(#grid)"/>
     <ellipse class="glow" cx="{glow_cx}" cy="{h // 2}" rx="380" ry="{h * 0.6:.0f}" fill="url(#glow)"/>
 {body}
-    <rect y="{h - 4}" width="{w}" height="4" fill="#7c3aed" opacity=".6"/>
+    <rect y="{h - 4}" width="{w}" height="4" fill="#6d9eb4" opacity=".6"/>
   </g>
 </svg>
 """
@@ -83,7 +83,7 @@ def language_sizes(v):
         for e in r["languages"]["edges"]:
             name = e["node"]["name"]
             size, _ = langs.get(name, (0, None))
-            langs[name] = (size + e["size"], e["node"]["color"] or "#8b80c9")
+            langs[name] = (size + e["size"], e["node"]["color"] or "#8cabb9")
     return langs
 
 
@@ -115,16 +115,16 @@ def render_stats(v, days, today):
                       f'<text class="pct" x="{lx + 250}" y="{ly}" text-anchor="end">{100 * size / total:.1f}%</text>')
 
     body = f"""    <clipPath id="bar"><rect x="{bx}" y="92" width="{bw}" height="12" rx="6"/></clipPath>
-    <rect x="580" y="40" width="1" height="220" fill="#ffffff" opacity=".08"/>
+    <rect x="580" y="40" width="1" height="220" fill="#eef7f8" opacity=".08"/>
     {"".join(numbers)}
     <text class="h" x="{bx}" y="64">Languages</text>
     <g clip-path="url(#bar)">{"".join(bars)}</g>
     {"".join(legend)}"""
     style = """    .num { font-size: 52px; font-weight: 700; fill: url(#title); }
-    .lbl { font-size: 18px; fill: #8b80c9; }
-    .h { font-size: 22px; font-weight: 700; fill: #c4b5fd; }
-    .lang { font-size: 19px; fill: #c4b5fd; }
-    .pct { font-size: 17px; fill: #8b80c9; }"""
+    .lbl { font-size: 18px; fill: #8cabb9; }
+    .h { font-size: 22px; font-weight: 700; fill: #d4e5eb; }
+    .lang { font-size: 19px; fill: #d4e5eb; }
+    .pct { font-size: 17px; fill: #8cabb9; }"""
     return frame(300, body, style)
 
 
@@ -160,10 +160,10 @@ def render_stats_mobile(v, days, today):
                      f'<text class="pct" x="{lx + 260}" y="{ly}" text-anchor="end">{100 * size / total:.1f}%</text>')
 
     style = """    .num { font-size: 54px; font-weight: 700; fill: url(#title); }
-    .lbl { font-size: 20px; fill: #8b80c9; }
-    .h { font-size: 24px; font-weight: 700; fill: #c4b5fd; }
-    .lang { font-size: 22px; fill: #c4b5fd; }
-    .pct { font-size: 20px; fill: #8b80c9; }"""
+    .lbl { font-size: 20px; fill: #8cabb9; }
+    .h { font-size: 24px; font-weight: 700; fill: #d4e5eb; }
+    .lang { font-size: 22px; fill: #d4e5eb; }
+    .pct { font-size: 20px; fill: #8cabb9; }"""
     return frame(512, "    " + "".join(parts), style, width=600, glow_cx=150)
 
 
@@ -208,8 +208,8 @@ def render_calendar(v, days, width=1200, last_weeks=None, font=16):
           for k, c in enumerate(SHADES)),
         f'    <text class="lbl" x="{lx + 5 * (key + 8) + 4}" y="{ly + font}">More</text>',
     ])
-    style = f"""    .m {{ font-size: {font}px; fill: #8b80c9; }}
-    .lbl {{ font-size: {font}px; fill: #8b80c9; }}
+    style = f"""    .m {{ font-size: {font}px; fill: #8cabb9; }}
+    .lbl {{ font-size: {font}px; fill: #8cabb9; }}
     .w {{ animation: in .5s ease-out both; }}
     @keyframes in {{ from {{ opacity: 0; }} to {{ opacity: 1; }} }}"""
     return frame(int(ly + gap + font), body, style, width=width, glow_cx=width // 5)

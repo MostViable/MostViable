@@ -33,15 +33,15 @@
 
 <p align="center">
   <picture>
-    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/MostViable/MostViable/output/stats-mobile.svg?v=7"/>
-    <img src="https://raw.githubusercontent.com/MostViable/MostViable/output/stats.svg?v=7" width="100%" alt="stats"/>
+    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/MostViable/MostViable/output/stats-mobile.svg?v=8"/>
+    <img src="https://raw.githubusercontent.com/MostViable/MostViable/output/stats.svg?v=8" width="100%" alt="stats"/>
   </picture>
 </p>
 
 <p align="center">
   <picture>
-    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/MostViable/MostViable/output/calendar-mobile.svg?v=8"/>
-    <img src="https://raw.githubusercontent.com/MostViable/MostViable/output/calendar.svg?v=8" width="100%" alt="contribution calendar"/>
+    <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/MostViable/MostViable/output/calendar-mobile.svg?v=9"/>
+    <img src="https://raw.githubusercontent.com/MostViable/MostViable/output/calendar.svg?v=9" width="100%" alt="contribution calendar"/>
   </picture>
 </p>
 
