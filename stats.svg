@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#090f19"/><stop offset=".55" stop-color="#1e3446"/><stop offset="1" stop-color="#111b27"/>
+    </linearGradient>
+    <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#eef7f8"/><stop offset="1" stop-color="#9fc9dc"/>
+    </linearGradient>
+    <radialGradient id="glow"><stop offset="0" stop-color="#6d9eb4" stop-opacity=".45"/><stop offset="1" stop-color="#6d9eb4" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="7" cy="9" r="1" fill="#eef7f8" opacity=".22"/><circle cx="29" cy="25" r=".7" fill="#9fc9dc" opacity=".24"/><circle cx="37" cy="5" r=".45" fill="#eef7f8" opacity=".18"/></pattern>
+    <clipPath id="frame"><rect width="1200" height="300" rx="18"/></clipPath>
+  </defs>
+  <style>
+    text { font-family: 'JetBrains Mono', 'Fira Code', Consolas, 'Courier New', monospace; }
+    .glow { animation: drift 12s ease-in-out infinite alternate both; }
+    @keyframes drift { from { transform: translate(0, 0); } to { transform: translate(600px, 0); } }
+    .num { font-size: 52px; font-weight: 700; fill: url(#title); }
+    .lbl { font-size: 18px; fill: #8cabb9; }
+    .h { font-size: 22px; font-weight: 700; fill: #d4e5eb; }
+    .lang { font-size: 19px; fill: #d4e5eb; }
+    .pct { font-size: 17px; fill: #8cabb9; }
+  </style>
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="300" fill="url(#bg)"/>
+    <rect width="1200" height="300" fill="url(#grid)"/>
+    <ellipse class="glow" cx="300" cy="150" rx="380" ry="180" fill="url(#glow)"/>
+    <clipPath id="bar"><rect x="620" y="92" width="532" height="12" rx="6"/></clipPath>
+    <rect x="580" y="40" width="1" height="220" fill="#eef7f8" opacity=".08"/>
+    <text class="num" x="48" y="110">392</text><text class="lbl" x="48" y="140">contributions / year</text><text class="num" x="298" y="110">0</text><text class="lbl" x="298" y="140">current streak</text><text class="num" x="48" y="220">5</text><text class="lbl" x="48" y="250">longest streak</text><text class="num" x="298" y="220">7</text><text class="lbl" x="298" y="250">repositories</text>
+    <text class="h" x="620" y="64">Languages</text>
+    <g clip-path="url(#bar)"><rect x="620.0" y="92" width="320.8" height="12" fill="#3572A5"/><rect x="940.8" y="92" width="114.8" height="12" fill="#e34c26"/><rect x="1055.7" y="92" width="48.3" height="12" fill="#f1e05a"/><rect x="1104.0" y="92" width="38.5" height="12" fill="#012456"/><rect x="1142.4" y="92" width="7.4" height="12" fill="#663399"/><rect x="1149.8" y="92" width="2.1" height="12" fill="#89e051"/></g>
+    <circle cx="627" cy="144" r="7" fill="#3572A5"/><text class="lang" x="644" y="150">Python</text><text class="pct" x="870" y="150" text-anchor="end">60.3%</text><circle cx="897" cy="144" r="7" fill="#e34c26"/><text class="lang" x="914" y="150">HTML</text><text class="pct" x="1140" y="150" text-anchor="end">21.6%</text><circle cx="627" cy="186" r="7" fill="#f1e05a"/><text class="lang" x="644" y="192">JavaScript</text><text class="pct" x="870" y="192" text-anchor="end">9.1%</text><circle cx="897" cy="186" r="7" fill="#012456"/><text class="lang" x="914" y="192">PowerShell</text><text class="pct" x="1140" y="192" text-anchor="end">7.2%</text><circle cx="627" cy="228" r="7" fill="#663399"/><text class="lang" x="644" y="234">CSS</text><text class="pct" x="870" y="234" text-anchor="end">1.4%</text><circle cx="897" cy="228" r="7" fill="#89e051"/><text class="lang" x="914" y="234">Shell</text><text class="pct" x="1140" y="234" text-anchor="end">0.4%</text>
+    <rect y="296" width="1200" height="4" fill="#6d9eb4" opacity=".6"/>
+  </g>
+</svg>
