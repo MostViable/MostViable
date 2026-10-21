@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
-    <source media="(max-width: 600px)" srcset="assets/header-mobile.svg?v=5"/>
-    <img src="assets/header.svg?v=5" width="100%" alt="MostViable"/>
+    <source media="(max-width: 600px)" srcset="assets/header-bleakfate-mobile.svg"/>
+    <img src="assets/header-bleakfate.svg" width="100%" alt="MostViable"/>
   </picture>
 </p>
 
