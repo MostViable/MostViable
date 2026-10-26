@@ -46,9 +46,22 @@ def levels(counts):
     return lambda n: 0 if not n else 1 + sum(n > t for t in q)
 
 
+# BARE: the same content without the card (background, dots, glow, bottom stripe) — for the portfolio site, where it
+# sits straight on the page's own space background (*-bare.svg, since 2026-10-26)
+BARE = False
+
+
 def frame(h, body, style, width=1200, glow_cx=300):
     w = width
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="{w}" height="{h}">
+    card = "" if BARE else f"""    <rect width="{w}" height="{h}" fill="url(#bg)"/>
+    <rect width="{w}" height="{h}" fill="url(#grid)"/>
+    <ellipse class="glow" cx="{glow_cx}" cy="{h // 2}" rx="380" ry="{h * 0.6:.0f}" fill="url(#glow)"/>
+"""
+    stripe = "" if BARE else f"""    <rect y="{h - 4}" width="{w}" height="4" fill="#6d9eb4" opacity=".6"/>
+"""
+    # without the card its side padding is just empty space: the bare file is cropped to the content
+    pad = (48 if w > 600 else 32) if BARE else 0
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="{pad} 0 {w - 2 * pad} {h}" width="{w - 2 * pad}" height="{h}">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#090f19"/><stop offset=".55" stop-color="#1e3446"/><stop offset="1" stop-color="#111b27"/>
@@ -67,12 +80,8 @@ def frame(h, body, style, width=1200, glow_cx=300):
 {style}
   </style>
   <g clip-path="url(#frame)">
-    <rect width="{w}" height="{h}" fill="url(#bg)"/>
-    <rect width="{w}" height="{h}" fill="url(#grid)"/>
-    <ellipse class="glow" cx="{glow_cx}" cy="{h // 2}" rx="380" ry="{h * 0.6:.0f}" fill="url(#glow)"/>
-{body}
-    <rect y="{h - 4}" width="{w}" height="4" fill="#6d9eb4" opacity=".6"/>
-  </g>
+{card}{body}
+{stripe}  </g>
 </svg>
 """
 
@@ -235,4 +244,10 @@ if __name__ == "__main__":
     open("dist/stats-mobile.svg", "w", encoding="utf-8").write(render_stats_mobile(v, days, today))
     open("dist/calendar.svg", "w", encoding="utf-8").write(render_calendar(v, days))
     open("dist/calendar-mobile.svg", "w", encoding="utf-8").write(
+        render_calendar(v, days, width=600, last_weeks=13, font=20))
+    BARE = True
+    open("dist/stats-bare.svg", "w", encoding="utf-8").write(render_stats(v, days, today))
+    open("dist/stats-mobile-bare.svg", "w", encoding="utf-8").write(render_stats_mobile(v, days, today))
+    open("dist/calendar-bare.svg", "w", encoding="utf-8").write(render_calendar(v, days))
+    open("dist/calendar-mobile-bare.svg", "w", encoding="utf-8").write(
         render_calendar(v, days, width=600, last_weeks=13, font=20))
